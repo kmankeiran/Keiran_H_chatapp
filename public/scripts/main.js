@@ -34,7 +34,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
         methods: {
             dispatchMessage() {
                 //debugger;
-                socket.emit('chatmessage', { content: this.message, name: this.nickname || "Anonymous" });
+                socket.emit('chatmessage', { content: this.message, name: localStorage.getItem('name') || "Anonymous" });
 
                 this.message = "";
             }
