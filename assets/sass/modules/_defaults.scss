@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+@keyframes pop-in { 
+    0% { transform: scale(0); } 100% { transform: scale(1); } }
+
 body {
     background-color: $main-bg-color;
     color: $main-text-color;
@@ -120,6 +123,8 @@ a {
 .new-message {
     padding: 10px;
     background-color: rgba(153, 82, 246, 0.801);
+    transform: scale(0);  
+    animation: pop-in 0.5s forwards;
     color: white;
     border-radius: 8px;
     float: left;
@@ -130,6 +135,8 @@ a {
 
 .my-message {
     background-color: rgb(19, 187, 19);
+    transform: scale(0);  
+    animation: pop-in 0.5s forwards;
     margin-right: 15px;
     margin-top: 20px;
     float: right;
