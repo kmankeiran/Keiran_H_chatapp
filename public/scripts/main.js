@@ -31,7 +31,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
             socketID: "",
             message: "",
             isTyping: false,
-            isSomeoneElseTyping: false,
+            isSomeoneElseTyping: false
         },
 
         created: function() {
@@ -42,14 +42,19 @@ import ChatMessage from "./components/TheMessageComponent.js"
             dispatchMessage() {
                 //debugger;
                 socket.emit('chatmessage', { content: this.message, name: localStorage.getItem('name') || "Anonymous" });
+                socket.emit('istyping', { istyping: false, name: localStorage.getItem('name') || "Anonymous" });
+                this.isTyping = false;
 
                 this.message = "";
             },
             onKeyPress() {
+                // If the sentence is greater than 0 and the user is inputing something, let Vue know they are typing
                 if(this.message.length > 0 && !this.isTyping) {
                     this.isTyping = true;
                     socket.emit('istyping', { istyping: true, name: localStorage.getItem('name') || "Anonymous" });
-                } else if(this.isTyping && this.message.length==0){
+                } 
+                // If Vue thinks they are typing but the message is the length of 0, then tell Vue they are no longer typing. Like backspacing.
+                else if(this.isTyping && this.message.length==0){
                     this.isTyping = false;
                     socket.emit('istyping', { istyping: false, name: localStorage.getItem('name') || "Anonymous" });
                 }

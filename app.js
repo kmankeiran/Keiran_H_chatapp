@@ -39,6 +39,8 @@ messenger.on('connection', (socket) => {
     });
 
     socket.on('istyping', function(msg) {
+        console.log(msg);
+
         messenger.emit('istyping', { id: socket.id, message: msg });
     });
 
