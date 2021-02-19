@@ -10,17 +10,21 @@
 </head>
 <body>
     <main>
-        <h1 class="hidden">Super Silly Chat</h1>
-        <h4>Add a username to join the chat</h4>
-        <h6>or not, to stealth post</h6>
+        <div class="wrapper">
+            <h1 class="add">Welcome to K-Chat!</h1>
+            <h3 class="add">Add a username to join</h4>
+            <h4 class="add">or message anonymously...shhh</h6>
 
-        <input type="text" placeholder="your handle">
-        <input type="password" placeholder="password">
+            <input id="name" type="text" placeholder="your nickname">
 
-        <input type="submit" value="JOIN">
+            <input id="join" type="submit" value="Add Username"></input>
 
-        <!-- temp hack to bypass login-->
-        <a href="/chat">to chat page</a>
+            <!-- temp hack to bypass login-->
+            <a href="/chat">Join the chat page!</a> 
+        </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
