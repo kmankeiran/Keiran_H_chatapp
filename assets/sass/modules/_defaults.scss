@@ -21,6 +21,10 @@ a {
     margin: lrem 0; 
 }
 
+#app h2 {
+    text-align: center;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -106,6 +110,11 @@ a {
     outline: none; 
     color: #fff;
     font-size: 18px;
+}
+
+#notify {
+    position: absolute;
+    bottom: 80px;
 }
 
 .new-message {
