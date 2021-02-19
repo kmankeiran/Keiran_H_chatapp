@@ -38,6 +38,10 @@ messenger.on('connection', (socket) => {
         messenger.emit('message', { id: socket.id, message: msg });
     });
 
+    socket.on('istyping', function(msg) {
+        messenger.emit('istyping', { id: socket.id, message: msg });
+    });
+
     socket.on('disconnect', () => {
         console.log('a user has disconnected');
     })

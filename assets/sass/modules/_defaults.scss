@@ -21,6 +21,60 @@ a {
     margin: lrem 0; 
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 600px;
+    margin-right: 600px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: rgba(121, 120, 120, 0.5);
+}
+
+.add {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#name {
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#join {
+    background-color:rgba(207, 31, 31, 0.698);
+    border: none; 
+    padding: 10px 20px;  
+    border-radius: 5px;
+    outline: none; 
+    color: #fff;
+    font-size: 18px;
+}
+
+.wrapper input {
+    margin-top: 30px;
+}
+
+.wrapper a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: green;
+    margin-top: 85px;
+    transition: 0.5s linear;
+}
+
+.wrapper a:hover {
+    background-color: black;
+}
+
 .message-wrapper {
     background: rgba(0, 0, 0, 0.15); 
     padding: 0.50rem; 
@@ -40,6 +94,7 @@ a {
     flex-grow: 1; 
     border-radius: 2rem; 
     margin: 0.25rem;
+    font-size: 15px;
 }
 
 .message-wrapper input {
@@ -55,17 +110,36 @@ a {
 
 .new-message {
     padding: 10px;
-    background-color: blue;
+    background-color: rgba(153, 82, 246, 0.801);
     color: white;
     border-radius: 8px;
     float: left;
     margin-left: 15px;
+    margin-top: 20px;
     clear: both;
 }
 
 .my-message {
-    background-color: green;
+    background-color: rgb(19, 187, 19);
     margin-right: 15px;
+    margin-top: 20px;
     float: right;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: rgba(121, 120, 120, 0.5);
+    }
+
+
 }
 
